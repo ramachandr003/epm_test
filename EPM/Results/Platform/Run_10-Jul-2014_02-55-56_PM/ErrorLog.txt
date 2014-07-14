@@ -1,0 +1,9 @@
+Started InternetExplorerDriver server (64-bit)
+2.41.0.0
+Listening on port 33940
+log4j:WARN No appenders could be found for logger (org.apache.http.impl.conn.tsccm.ThreadSafeClientConnManager).
+log4j:WARN Please initialize the log4j system properly.
+log4j:WARN See http://logging.apache.org/log4j/1.2/faq.html#noconfig for more info.
+Started InternetExplorerDriver server (64-bit)
+2.41.0.0
+Listening on port 37745

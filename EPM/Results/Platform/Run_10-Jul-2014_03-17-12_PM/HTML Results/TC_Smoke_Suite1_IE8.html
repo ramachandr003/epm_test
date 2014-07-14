@@ -1,0 +1,828 @@
+<!DOCTYPE html> 
+<html> 
+	 <head> 
+		 <meta charset='UTF-8'> 
+		 <title>EPM&Skills - TC_Smoke_Suite1 Automation Execution Results</title> 
+
+		 <style type='text/css'> 
+			 body { 
+				 background-color: #EEEEEE; 
+				 background-attachment: fixed !important; 
+				 height: 100% 
+				 background: -webkit-gradient(linear, left top, left bottom, from(#F5F0F2), to(#EEE));				 background: -moz-linear-gradient(top,  #F5F0F2,  #EEE);				 font-family: Verdana 
+				 font-size:12px 
+				 text-align: center; 
+			 } 
+
+			 small { 
+				 font-size: 0.7em; 
+			 } 
+
+			 table { 
+				 border: 1px solid #888; 
+				 border-collapse: collapse; 
+				 border-spacing: 0px; 
+				 width: 1000px; 
+				 margin-left: auto; 
+				 margin-right: auto; 
+				 box-shadow: -10px 10px 5px #EEEEEE; 
+			 } 
+
+			 tr.heading { 
+				 background-color: #990033; 
+				 color: #DDDDDD; 
+				 font-size: 0.9em; 
+				 font-weight: bold; 
+				 display: table-row; 
+			 } 
+
+			 tr.subheading { 
+				 background-color: #DDDDDD; 
+				 color: #990033; 
+				 font-weight: bold; 
+				 font-size: 0.9em; 
+				 text-align: justify; 
+			 } 
+
+			 tr.section { 
+				 background-color: #CCCCCC; 
+				 color: #004B91; 
+				 cursor: pointer; 
+				 font-weight: bold; 
+				 font-size: 0.9em; 
+				 text-align: justify; 
+			 } 
+
+			 tr.subsection { 
+				 cursor: pointer; 
+			 } 
+
+			 tr.content { 
+				 background-color: #FFFFFF; 
+				 color: #004B91; 
+				 font-size: 0.9em; 
+				 font-weight: bold; 
+				 display: table-row; 
+			 } 
+
+			 td, th { 
+				 padding: 4px; 
+				 text-align: inherit\0/; 
+			 } 
+
+			 td.justified { 
+				 text-align: left; 
+			 } 
+
+			 td.pass { 
+				 font-weight: bold; 
+				 color: #154216; 
+			 } 
+
+			 td.fail { 
+				 font-weight: bold; 
+				 color: #A61616; 
+			 } 
+
+			 td.done, td.screenshot { 
+				 font-weight: bold; 
+				 color: black; 
+			 } 
+
+			 td.debug { 
+				 font-weight: bold; 
+				 color: blue; 
+			 } 
+
+			 td.warning { 
+				 font-weight: bold; 
+				 color: orange; 
+			 } 
+		 </style> 
+
+		 <script> 
+			 function toggleMenu(objID) { 
+				 if (!document.getElementById) return; 
+				 var ob = document.getElementById(objID).style; 
+				 if(ob.display === 'none') { 
+					 try { 
+						 ob.display='table-row-group'; 
+					 } catch(ex) { 
+						 ob.display='block'; 
+					 } 
+				 } 
+				 else { 
+					 ob.display='none'; 
+				 } 
+			 } 
+			 function toggleSubMenu(objId) { 
+				 for(i=1; i<10000; i++) { 
+					 var ob = document.getElementById(objId.concat(i)); 
+					 if(ob === null) { 
+						 break; 
+					 } 
+					 if(ob.style.display === 'none') { 
+						 try { 
+							 ob.style.display='table-row'; 
+						 } catch(ex) { 
+							 ob.style.display='block'; 
+						 } 
+					 } 
+					 else { 
+						 ob.style.display='none'; 
+					 } 
+				 } 
+			 } 
+		 </script> 
+	 </head> 
+
+	 <body> 
+		 <table id='header'> 
+			 <colgroup> 
+				 <col style='width: 25%' /> 
+				 <col style='width: 25%' /> 
+				 <col style='width: 25%' /> 
+				 <col style='width: 25%' /> 
+			 </colgroup> 
+
+			 <thead> 
+				 <tr class='heading'> 
+					 <th colspan='4' style='font-family:Copperplate Gothic Bold; font-size:1.4em;'> 
+						 EPM&Skills - TC_Smoke_Suite1 Automation Execution Results 
+					 </th> 
+				 </tr> 
+				 <tr class='subheading'> 
+					 <th>&nbsp;Date&nbsp;&&nbsp;Time</th> 
+					 <th>&nbsp;:&nbsp;10-Jul-2014&nbsp;03:17:12&nbsp;PM</th> 
+					 <th>&nbsp;Iteration&nbsp;Mode</th> 
+					 <th>&nbsp;:&nbsp;RunOneIterationOnly</th> 
+				 </tr> 
+				 <tr class='subheading'> 
+					 <th>&nbsp;Start&nbsp;Iteration</th> 
+					 <th>&nbsp;:&nbsp;1</th> 
+					 <th>&nbsp;End&nbsp;Iteration</th> 
+					 <th>&nbsp;:&nbsp;1</th> 
+				 </tr> 
+				 <tr class='subheading'> 
+					 <th>&nbsp;Browser</th> 
+					 <th>&nbsp;:&nbsp;iexplore</th> 
+					 <th>&nbsp;Application&nbsp;Name</th> 
+					 <th>&nbsp;:&nbsp;http://mns.cert.boca.mcstrategies.com/NursingSkills/Home.aspx?VirtualName=skills_cert</th> 
+				 </tr> 
+			 </thead> 
+		 </table> 
+
+		 <table id='main'> 
+			 <colgroup> 
+				 <col style='width: 5%' /> 
+				 <col style='width: 37%' /> 
+				 <col style='width: 43%' /> 
+				 <col style='width: 7%' /> 
+				 <col style='width: 8%' /> 
+			 </colgroup> 
+
+			 <thead> 
+				 <tr class='heading'> 
+					 <th>Step_No</th> 
+					 <th>Step_Name</th> 
+					 <th>Description</th> 
+					 <th>Status</th> 
+					 <th>Step_Time</th> 
+				 </tr> 
+			 </thead> 
+
+			 <tbody> 
+				 <tr class='section'> 
+					 <td colspan='5' onclick="toggleMenu('Iteration1')">+ Iteration: 1</td> 
+				 </tr> 
+			 </tbody> 
+			 <tbody id='Iteration1' style='display:table-row-group'> 
+				 <tr class='subheading subsection'> 
+					 <td colspan='5' onclick="toggleSubMenu('Iteration1LoginintoEPMapplictaion')">&nbsp;+ Login into EPM applictaion</td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1LoginintoEPMapplictaion1'> 
+					 <td style='text-align:center'>1</td> 
+					 <td class='justified'>Verify UserName and Password Fields displayed in login Page</td> 
+					 <td class='justified'>EPM Login page is displayed with Username and Password fields</td> 
+					 <td class='pass'>PASS</td> 
+					 <td><small>10-Jul-2014 03:17:16 PM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1LoginintoEPMapplictaion2'> 
+					 <td style='text-align:center'>2</td> 
+					 <td class='justified'>Enter UserName</td> 
+					 <td class='justified'> ' mosbyadmin '  is entered in the UserName text field</td> 
+					 <td class='done'>DONE</td> 
+					 <td><small>10-Jul-2014 03:17:17 PM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1LoginintoEPMapplictaion3'> 
+					 <td style='text-align:center'>3</td> 
+					 <td class='justified'>Enter Password</td> 
+					 <td class='justified'> ' hello1234 '  is entered in the Password text field</td> 
+					 <td class='done'>DONE</td> 
+					 <td><small>10-Jul-2014 03:17:17 PM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1LoginintoEPMapplictaion4'> 
+					 <td style='text-align:center'>4</td> 
+					 <td class='justified'>Click Login Button</td> 
+					 <td class='justified'>Login Button is clicked</td> 
+					 <td class='done'>DONE</td> 
+					 <td><small>10-Jul-2014 03:17:20 PM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1LoginintoEPMapplictaion5'> 
+					 <td style='text-align:center'>5</td> 
+					 <td class='justified'>Verify the EPM Login functionality</td> 
+					 <td class='justified'>EPM Home page is displayed with Logout and MyAccount link...</td> 
+					 <td class='pass'>PASS</td> 
+					 <td><small>10-Jul-2014 03:17:22 PM</small></td> 
+				 </tr> 
+				 <tr class='subheading subsection'> 
+					 <td colspan='5' onclick="toggleSubMenu('Iteration1CopyanyexistingSkillsayAbdominalBinder')">&nbsp;+ Copy any existing Skill say - 'Abdominal Binder'</td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1CopyanyexistingSkillsayAbdominalBinder1'> 
+					 <td style='text-align:center'>6</td> 
+					 <td class='justified'>Navigate and click the Skills->Add/Edit Skills menu path Link</td> 
+					 <td class='justified'> 'Add/Edit Skills' link is clicked</td> 
+					 <td class='done'>DONE</td> 
+					 <td><small>10-Jul-2014 03:17:26 PM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1CopyanyexistingSkillsayAbdominalBinder2'> 
+					 <td style='text-align:center'>7</td> 
+					 <td class='justified'>Enter Skill Name</td> 
+					 <td class='justified'> ' AAA Auto Abdominal Binder-llyuou '  is entered in the UserName text field</td> 
+					 <td class='done'>DONE</td> 
+					 <td><small>10-Jul-2014 03:17:48 PM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1CopyanyexistingSkillsayAbdominalBinder3'> 
+					 <td style='text-align:center'>8</td> 
+					 <td class='justified'>Select Radio Alert option</td> 
+					 <td class='justified'> ' YES '  is Selected in the Alert Radio field</td> 
+					 <td class='done'>DONE</td> 
+					 <td><small>10-Jul-2014 03:17:49 PM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1CopyanyexistingSkillsayAbdominalBinder4'> 
+					 <td style='text-align:center'>9</td> 
+					 <td class='justified'>Select Radio SkillStatus option</td> 
+					 <td class='justified'> ' YES '  is Selected in the SkillStatus Radio field</td> 
+					 <td class='done'>DONE</td> 
+					 <td><small>10-Jul-2014 03:17:50 PM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1CopyanyexistingSkillsayAbdominalBinder5'> 
+					 <td style='text-align:center'>10</td> 
+					 <td class='justified'>Enter Alert</td> 
+					 <td class='justified'> ' Sample Alert to Copy skill-1405023465076 '  is entered in the Alert textArea field</td> 
+					 <td class='done'>DONE</td> 
+					 <td><small>10-Jul-2014 03:17:51 PM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1CopyanyexistingSkillsayAbdominalBinder6'> 
+					 <td style='text-align:center'>11</td> 
+					 <td class='justified'>Enter Summary</td> 
+					 <td class='justified'> '  '  is entered in the Summary textArea field</td> 
+					 <td class='done'>DONE</td> 
+					 <td><small>10-Jul-2014 03:17:52 PM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1CopyanyexistingSkillsayAbdominalBinder7'> 
+					 <td style='text-align:center'>12</td> 
+					 <td class='justified'>Enter Ver Hist Comments</td> 
+					 <td class='justified'> ' Copying skill - Version History comment-1405023465076 '  is entered in the Ver Hist Comments textArea field</td> 
+					 <td class='done'>DONE</td> 
+					 <td><small>10-Jul-2014 03:17:54 PM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1CopyanyexistingSkillsayAbdominalBinder8'> 
+					 <td style='text-align:center'>13</td> 
+					 <td class='justified'>Click Save button</td> 
+					 <td class='justified'>Save button is clicked</td> 
+					 <td class='done'>DONE</td> 
+					 <td><small>10-Jul-2014 03:17:55 PM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1CopyanyexistingSkillsayAbdominalBinder9'> 
+					 <td style='text-align:center'>14</td> 
+					 <td class='justified'>Verify and click 'Yes' on the Dialog</td> 
+					 <td class='justified'>Save changes dialog is displayed and Accepted</td> 
+					 <td class='done'>DONE</td> 
+					 <td><small>10-Jul-2014 03:17:56 PM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1CopyanyexistingSkillsayAbdominalBinder10'> 
+					 <td style='text-align:center'>15</td> 
+					 <td class='justified'>Verify the Presence of ' Your request has been processed successfully'.</td> 
+					 <td class='justified'>' Your request has been processed successfully' message is displayed</td> 
+					 <td class='pass'>PASS</td> 
+					 <td><small>10-Jul-2014 03:17:57 PM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1CopyanyexistingSkillsayAbdominalBinder11'> 
+					 <td style='text-align:center'>16</td> 
+					 <td class='justified'>Click Skill Letter 'A' link</td> 
+					 <td class='justified'>Link is clicked</td> 
+					 <td class='done'>DONE</td> 
+					 <td><small>10-Jul-2014 03:17:58 PM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1CopyanyexistingSkillsayAbdominalBinder12'> 
+					 <td style='text-align:center'>17</td> 
+					 <td class='justified'>Verify the Presence of Skill Name</td> 
+					 <td class='justified'> ' AAA Auto Abdominal Binder-llyuou '  is displayed in Skills result table</td> 
+					 <td class='done'>DONE</td> 
+					 <td><small>10-Jul-2014 03:18:15 PM</small></td> 
+				 </tr> 
+				 <tr class='subheading subsection'> 
+					 <td colspan='5' onclick="toggleSubMenu('Iteration1CreateaLearner1LearnerIDAutoLrnIDndmlhi')">&nbsp;+ Create a Learner : 1        |              Learner ID:AutoLrnIDndmlhi</td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1CreateaLearner1LearnerIDAutoLrnIDndmlhi1'> 
+					 <td style='text-align:center'>18</td> 
+					 <td class='justified'>Navigate and click the Learners->Add a New Learner menu path Link</td> 
+					 <td class='justified'> 'Add a New Learner' link is clicked</td> 
+					 <td class='done'>DONE</td> 
+					 <td><small>10-Jul-2014 03:18:21 PM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1CreateaLearner1LearnerIDAutoLrnIDndmlhi2'> 
+					 <td style='text-align:center'>19</td> 
+					 <td class='justified'>Enter LearnerID</td> 
+					 <td class='justified'> ' AutoLrnIDndmlhi '  is entered in the Learner ID field</td> 
+					 <td class='done'>DONE</td> 
+					 <td><small>10-Jul-2014 03:18:22 PM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1CreateaLearner1LearnerIDAutoLrnIDndmlhi3'> 
+					 <td style='text-align:center'>20</td> 
+					 <td class='justified'>Enter FirstName</td> 
+					 <td class='justified'> ' AutoLrnFNndmlhi '  is entered in the Learner FirstName field</td> 
+					 <td class='done'>DONE</td> 
+					 <td><small>10-Jul-2014 03:18:23 PM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1CreateaLearner1LearnerIDAutoLrnIDndmlhi4'> 
+					 <td style='text-align:center'>21</td> 
+					 <td class='justified'>Enter LastName</td> 
+					 <td class='justified'> ' AutoLrnLNndmlhi '  is entered in the Learner LastName field</td> 
+					 <td class='done'>DONE</td> 
+					 <td><small>10-Jul-2014 03:18:25 PM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1CreateaLearner1LearnerIDAutoLrnIDndmlhi5'> 
+					 <td style='text-align:center'>22</td> 
+					 <td class='justified'>Select List Facility</td> 
+					 <td class='justified'> ' St. Josephs Hospital & Medical Center '  is selected in the Learner facility ListBox</td> 
+					 <td class='done'>DONE</td> 
+					 <td><small>10-Jul-2014 03:18:28 PM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1CreateaLearner1LearnerIDAutoLrnIDndmlhi6'> 
+					 <td style='text-align:center'>23</td> 
+					 <td class='justified'>Select Radio SortDepartmentByName option</td> 
+					 <td class='justified'> SortDepartmentByName Radio is Selected</td> 
+					 <td class='done'>DONE</td> 
+					 <td><small>10-Jul-2014 03:18:30 PM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1CreateaLearner1LearnerIDAutoLrnIDndmlhi7'> 
+					 <td style='text-align:center'>24</td> 
+					 <td class='justified'>Select List Department</td> 
+					 <td class='justified'> ' admin (0A0A0) '  is selected in the Learner Department ListBox</td> 
+					 <td class='done'>DONE</td> 
+					 <td><small>10-Jul-2014 03:18:36 PM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1CreateaLearner1LearnerIDAutoLrnIDndmlhi8'> 
+					 <td style='text-align:center'>25</td> 
+					 <td class='justified'>Enter EmailID</td> 
+					 <td class='justified'> ' ramesh.ramachandran@elsevier.com '  is entered in the Learner EmailID field</td> 
+					 <td class='done'>DONE</td> 
+					 <td><small>10-Jul-2014 03:18:37 PM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1CreateaLearner1LearnerIDAutoLrnIDndmlhi9'> 
+					 <td style='text-align:center'>26</td> 
+					 <td class='justified'>Click Save button</td> 
+					 <td class='justified'>Save Button is Clicked</td> 
+					 <td class='done'>DONE</td> 
+					 <td><small>10-Jul-2014 03:18:38 PM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1CreateaLearner1LearnerIDAutoLrnIDndmlhi10'> 
+					 <td style='text-align:center'>27</td> 
+					 <td class='justified'>Verify the Presence of ' Your request has been processed successfully.'.</td> 
+					 <td class='justified'>' Your request has been processed successfully.' message is displayed</td> 
+					 <td class='pass'>PASS</td> 
+					 <td><small>10-Jul-2014 03:18:43 PM</small></td> 
+				 </tr> 
+				 <tr class='subheading subsection'> 
+					 <td colspan='5' onclick="toggleSubMenu('Iteration1CreateaGroupandAdd4learnerstoGroupAutoGroupNamellyuou')">&nbsp;+ Create a Group and Add 4 learners to Group - 'AutoGroupNamellyuou'</td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1CreateaGroupandAdd4learnerstoGroupAutoGroupNamellyuou1'> 
+					 <td style='text-align:center'>28</td> 
+					 <td class='justified'>Navigate and click the System->Manage Groups menu path Link</td> 
+					 <td class='justified'> 'Manage Groups' link is clicked</td> 
+					 <td class='done'>DONE</td> 
+					 <td><small>10-Jul-2014 03:18:49 PM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1CreateaGroupandAdd4learnerstoGroupAutoGroupNamellyuou2'> 
+					 <td style='text-align:center'>29</td> 
+					 <td class='justified'>Click Add New Group button.</td> 
+					 <td class='justified'>Add New Group Button is Clicked</td> 
+					 <td class='done'>DONE</td> 
+					 <td><small>10-Jul-2014 03:18:50 PM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1CreateaGroupandAdd4learnerstoGroupAutoGroupNamellyuou3'> 
+					 <td style='text-align:center'>30</td> 
+					 <td class='justified'>Enter GroupCode</td> 
+					 <td class='justified'> ' AutoGroupNamellyuou '  is entered in the GroupCode text field</td> 
+					 <td class='done'>DONE</td> 
+					 <td><small>10-Jul-2014 03:18:52 PM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1CreateaGroupandAdd4learnerstoGroupAutoGroupNamellyuou4'> 
+					 <td style='text-align:center'>31</td> 
+					 <td class='justified'>Enter Group Description</td> 
+					 <td class='justified'> ' AutoGroupDescllyuou '  is entered in the Group Description text field</td> 
+					 <td class='done'>DONE</td> 
+					 <td><small>10-Jul-2014 03:18:53 PM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1CreateaGroupandAdd4learnerstoGroupAutoGroupNamellyuou5'> 
+					 <td style='text-align:center'>32</td> 
+					 <td class='justified'>Click Insert Group button.</td> 
+					 <td class='justified'>Insert Group button is clicked</td> 
+					 <td class='done'>DONE</td> 
+					 <td><small>10-Jul-2014 03:18:54 PM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1CreateaGroupandAdd4learnerstoGroupAutoGroupNamellyuou6'> 
+					 <td style='text-align:center'>33</td> 
+					 <td class='justified'>Create a Group with Name 'AutoGroupNamellyuou'</td> 
+					 <td class='justified'>Group is created and verified</td> 
+					 <td class='pass'>PASS</td> 
+					 <td><small>10-Jul-2014 03:19:29 PM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1CreateaGroupandAdd4learnerstoGroupAutoGroupNamellyuou7'> 
+					 <td style='text-align:center'>34</td> 
+					 <td class='justified'>Click Group AutoGroupNamellyuou</td> 
+					 <td class='justified'>Group 'AutoGroupNamellyuou' link is Clicked</td> 
+					 <td class='done'>DONE</td> 
+					 <td><small>10-Jul-2014 03:19:30 PM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1CreateaGroupandAdd4learnerstoGroupAutoGroupNamellyuou8'> 
+					 <td style='text-align:center'>35</td> 
+					 <td class='justified'>Enter LastName</td> 
+					 <td class='justified'> ' AutoLrnLNndmlhi '  is entered in the Learner LastName field</td> 
+					 <td class='done'>DONE</td> 
+					 <td><small>10-Jul-2014 03:19:34 PM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1CreateaGroupandAdd4learnerstoGroupAutoGroupNamellyuou9'> 
+					 <td style='text-align:center'>36</td> 
+					 <td class='justified'>Click List Learners button.</td> 
+					 <td class='justified'>List Learners Button is Clicked</td> 
+					 <td class='done'>DONE</td> 
+					 <td><small>10-Jul-2014 03:19:34 PM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1CreateaGroupandAdd4learnerstoGroupAutoGroupNamellyuou10'> 
+					 <td style='text-align:center'>37</td> 
+					 <td class='justified'>Add a Learner AutoLrnLNndmlhi to a group'AutoGroupNamellyuou'</td> 
+					 <td class='justified'>Learner is Added to Group Sucessfully</td> 
+					 <td class='done'>DONE</td> 
+					 <td><small>10-Jul-2014 03:19:38 PM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1CreateaGroupandAdd4learnerstoGroupAutoGroupNamellyuou11'> 
+					 <td style='text-align:center'>38</td> 
+					 <td class='justified'>Click Save button</td> 
+					 <td class='justified'>Save Button is Clicked</td> 
+					 <td class='done'>DONE</td> 
+					 <td><small>10-Jul-2014 03:19:39 PM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1CreateaGroupandAdd4learnerstoGroupAutoGroupNamellyuou12'> 
+					 <td style='text-align:center'>39</td> 
+					 <td class='justified'>Verify the Presence of ' Your request has been processed successfully'.</td> 
+					 <td class='justified'>' Your request has been processed successfully' message is displayed</td> 
+					 <td class='pass'>PASS</td> 
+					 <td><small>10-Jul-2014 03:19:42 PM</small></td> 
+				 </tr> 
+				 <tr class='subheading subsection'> 
+					 <td colspan='5' onclick="toggleSubMenu('Iteration1CreateaModuleAutoModuleSkillsllyuouwithSkill')">&nbsp;+ Create a Module 'AutoModuleSkillsllyuou' with Skill</td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1CreateaModuleAutoModuleSkillsllyuouwithSkill1'> 
+					 <td style='text-align:center'>40</td> 
+					 <td class='justified'>Navigate and click the eLearning->Create an Assignable Module menu path Link</td> 
+					 <td class='justified'> 'Create an Assignable Module' link is clicked</td> 
+					 <td class='done'>DONE</td> 
+					 <td><small>10-Jul-2014 03:19:47 PM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1CreateaModuleAutoModuleSkillsllyuouwithSkill2'> 
+					 <td style='text-align:center'>41</td> 
+					 <td class='justified'>Click Remove All Saved Items button</td> 
+					 <td class='justified'>Remove All Saved Items button is clicked</td> 
+					 <td class='done'>DONE</td> 
+					 <td><small>10-Jul-2014 03:19:54 PM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1CreateaModuleAutoModuleSkillsllyuouwithSkill3'> 
+					 <td style='text-align:center'>42</td> 
+					 <td class='justified'>Accept the Alert if displayed any</td> 
+					 <td class='justified'>Alert is Accepted</td> 
+					 <td class='done'>DONE</td> 
+					 <td><small>10-Jul-2014 03:19:57 PM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1CreateaModuleAutoModuleSkillsllyuouwithSkill4'> 
+					 <td style='text-align:center'>43</td> 
+					 <td class='justified'>Select value 'Mosby Skills' from Content Source drop down.</td> 
+					 <td class='justified'>'Mosby Skills' is selected</td> 
+					 <td class='done'>DONE</td> 
+					 <td><small>10-Jul-2014 03:20:00 PM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1CreateaModuleAutoModuleSkillsllyuouwithSkill5'> 
+					 <td style='text-align:center'>44</td> 
+					 <td class='justified'>Select the Checkbox for Item(Lessons/Skills) 'AAA Auto Abdominal Binder-llyuou'</td> 
+					 <td class='justified'>Item  'AAA Auto Abdominal Binder-llyuou' checkbox is Selected</td> 
+					 <td class='done'>DONE</td> 
+					 <td><small>10-Jul-2014 03:20:56 PM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1CreateaModuleAutoModuleSkillsllyuouwithSkill6'> 
+					 <td style='text-align:center'>45</td> 
+					 <td class='justified'>Click Add To Saved Items button</td> 
+					 <td class='justified'>Add To Saved Items button is clicked</td> 
+					 <td class='done'>DONE</td> 
+					 <td><small>10-Jul-2014 03:21:21 PM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1CreateaModuleAutoModuleSkillsllyuouwithSkill7'> 
+					 <td style='text-align:center'>46</td> 
+					 <td class='justified'>Click Create Module button</td> 
+					 <td class='justified'>Create New Module Button is clicked</td> 
+					 <td class='done'>DONE</td> 
+					 <td><small>10-Jul-2014 03:21:56 PM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1CreateaModuleAutoModuleSkillsllyuouwithSkill8'> 
+					 <td style='text-align:center'>47</td> 
+					 <td class='justified'>Verify the window Frame'create new module' is opened.</td> 
+					 <td class='justified'>'create new module' frame window is displayed.</td> 
+					 <td class='done'>DONE</td> 
+					 <td><small>10-Jul-2014 03:22:40 PM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1CreateaModuleAutoModuleSkillsllyuouwithSkill9'> 
+					 <td style='text-align:center'>48</td> 
+					 <td class='justified'>Enter value 'AutoModuleSkillsllyuou'</td> 
+					 <td class='justified'>'AutoModuleSkillsllyuou' is entered in New Module text field</td> 
+					 <td class='done'>DONE</td> 
+					 <td><small>10-Jul-2014 03:22:42 PM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1CreateaModuleAutoModuleSkillsllyuouwithSkill10'> 
+					 <td style='text-align:center'>49</td> 
+					 <td class='justified'>Select the Checkbox for Item(Lessons/Skills) 'AAA Auto Abdominal Binder-llyuou'</td> 
+					 <td class='justified'>Item  'AAA Auto Abdominal Binder-llyuou' checkbox is Selected</td> 
+					 <td class='done'>DONE</td> 
+					 <td><small>10-Jul-2014 03:22:44 PM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1CreateaModuleAutoModuleSkillsllyuouwithSkill11'> 
+					 <td style='text-align:center'>50</td> 
+					 <td class='justified'>Click Create Module button</td> 
+					 <td class='justified'>Create Module Button is clicked</td> 
+					 <td class='done'>DONE</td> 
+					 <td><small>10-Jul-2014 03:22:44 PM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1CreateaModuleAutoModuleSkillsllyuouwithSkill12'> 
+					 <td style='text-align:center'>51</td> 
+					 <td class='justified'>Verify the Presence of ' Your request has been processed successfully'.</td> 
+					 <td class='justified'>' Your request has been processed successfully' message is displayed</td> 
+					 <td class='pass'>PASS</td> 
+					 <td><small>10-Jul-2014 03:22:46 PM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1CreateaModuleAutoModuleSkillsllyuouwithSkill13'> 
+					 <td style='text-align:center'>52</td> 
+					 <td class='justified'>Close the frame CREATE NEW MODULE</td> 
+					 <td class='justified'> ' CREATE NEW MODULE ' is closed and Driver Control back to Parent Window</td> 
+					 <td class='done'>DONE</td> 
+					 <td><small>10-Jul-2014 03:22:56 PM</small></td> 
+				 </tr> 
+				 <tr class='subheading subsection'> 
+					 <td colspan='5' onclick="toggleSubMenu('Iteration1EditaModuleAutoModuleSkillsllyuouandassignPreceptorsChecklist')">&nbsp;+ Edit a Module 'AutoModuleSkillsllyuou' and assign  Preceptors & Checklist</td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1EditaModuleAutoModuleSkillsllyuouandassignPreceptorsChecklist1'> 
+					 <td style='text-align:center'>53</td> 
+					 <td class='justified'>Navigate and click the eLearning->Edit Existing Modules menu path Link</td> 
+					 <td class='justified'> 'Edit Existing Modules' link is clicked</td> 
+					 <td class='done'>DONE</td> 
+					 <td><small>10-Jul-2014 03:23:21 PM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1EditaModuleAutoModuleSkillsllyuouandassignPreceptorsChecklist2'> 
+					 <td style='text-align:center'>54</td> 
+					 <td class='justified'>Select value 'L-AutoModuleSkillsllyuou' from Select Module drop down and click 'Select Module' Button to Edit the Module.</td> 
+					 <td class='justified'>'L-AutoModuleSkillsllyuou' is selected</td> 
+					 <td class='done'>DONE</td> 
+					 <td><small>10-Jul-2014 03:23:24 PM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1EditaModuleAutoModuleSkillsllyuouandassignPreceptorsChecklist3'> 
+					 <td style='text-align:center'>55</td> 
+					 <td class='justified'>Click On Tab - Assignable Items</td> 
+					 <td class='justified'>' Assignable Items' tab is selected.</td> 
+					 <td class='done'>DONE</td> 
+					 <td><small>10-Jul-2014 03:23:33 PM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1EditaModuleAutoModuleSkillsllyuouandassignPreceptorsChecklist4'> 
+					 <td style='text-align:center'>56</td> 
+					 <td class='justified'>Select PreRequisite 'YES' CheckBox</td> 
+					 <td class='justified'>PreRequisite is ON</td> 
+					 <td class='done'>DONE</td> 
+					 <td><small>10-Jul-2014 03:23:39 PM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1EditaModuleAutoModuleSkillsllyuouandassignPreceptorsChecklist5'> 
+					 <td style='text-align:center'>57</td> 
+					 <td class='justified'>Click Update button</td> 
+					 <td class='justified'>Update button is clicked</td> 
+					 <td class='done'>DONE</td> 
+					 <td><small>10-Jul-2014 03:23:42 PM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1EditaModuleAutoModuleSkillsllyuouandassignPreceptorsChecklist6'> 
+					 <td style='text-align:center'>58</td> 
+					 <td class='justified'>Click On Tab - Skills Preceptors</td> 
+					 <td class='justified'>' Skills Preceptors' tab is selected.</td> 
+					 <td class='done'>DONE</td> 
+					 <td><small>10-Jul-2014 03:23:46 PM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1EditaModuleAutoModuleSkillsllyuouandassignPreceptorsChecklist7'> 
+					 <td style='text-align:center'>59</td> 
+					 <td class='justified'>Click Add Preceptors button in Skills Preceptors tab</td> 
+					 <td class='justified'>Add Preceptors button is clicked</td> 
+					 <td class='done'>DONE</td> 
+					 <td><small>10-Jul-2014 03:23:47 PM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1EditaModuleAutoModuleSkillsllyuouandassignPreceptorsChecklist8'> 
+					 <td style='text-align:center'>60</td> 
+					 <td class='justified'>Verify the window Frame'manage module preceptors' is opened.</td> 
+					 <td class='justified'>'manage module preceptors' frame window is displayed.</td> 
+					 <td class='done'>DONE</td> 
+					 <td><small>10-Jul-2014 03:23:57 PM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1EditaModuleAutoModuleSkillsllyuouandassignPreceptorsChecklist9'> 
+					 <td style='text-align:center'>61</td> 
+					 <td class='justified'>Select the Checkbox for Preceptor(LastName, FirstName) 'Administrator, Mosby'</td> 
+					 <td class='justified'>Preceptor Administrator, Mosby is Selected </td> 
+					 <td class='done'>DONE</td> 
+					 <td><small>10-Jul-2014 03:24:00 PM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1EditaModuleAutoModuleSkillsllyuouandassignPreceptorsChecklist10'> 
+					 <td style='text-align:center'>62</td> 
+					 <td class='justified'>Select the Checkbox for Preceptor(LastName, FirstName) 'Administrator, System'</td> 
+					 <td class='justified'>Preceptor Administrator, System is Selected </td> 
+					 <td class='done'>DONE</td> 
+					 <td><small>10-Jul-2014 03:24:01 PM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1EditaModuleAutoModuleSkillsllyuouandassignPreceptorsChecklist11'> 
+					 <td style='text-align:center'>63</td> 
+					 <td class='justified'>Select the Checkbox for Preceptor(LastName, FirstName) 'Administrator, Global'</td> 
+					 <td class='justified'>Preceptor Administrator, Global is Selected </td> 
+					 <td class='done'>DONE</td> 
+					 <td><small>10-Jul-2014 03:24:03 PM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1EditaModuleAutoModuleSkillsllyuouandassignPreceptorsChecklist12'> 
+					 <td style='text-align:center'>64</td> 
+					 <td class='justified'>Click 'Add Selected Users' Button</td> 
+					 <td class='justified'>Add Selected Users button is clicked</td> 
+					 <td class='done'>DONE</td> 
+					 <td><small>10-Jul-2014 03:24:03 PM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1EditaModuleAutoModuleSkillsllyuouandassignPreceptorsChecklist13'> 
+					 <td style='text-align:center'>65</td> 
+					 <td class='justified'>Verify the Presence of ' Your request has been processed successfully'.</td> 
+					 <td class='justified'>' Your request has been processed successfully' message is displayed</td> 
+					 <td class='pass'>PASS</td> 
+					 <td><small>10-Jul-2014 03:24:04 PM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1EditaModuleAutoModuleSkillsllyuouandassignPreceptorsChecklist14'> 
+					 <td style='text-align:center'>66</td> 
+					 <td class='justified'>Close the frame MANAGE MODULE PRECEPTORS</td> 
+					 <td class='justified'> ' MANAGE MODULE PRECEPTORS ' is closed and Driver Control back to Parent Window</td> 
+					 <td class='done'>DONE</td> 
+					 <td><small>10-Jul-2014 03:24:06 PM</small></td> 
+				 </tr> 
+				 <tr class='subheading subsection'> 
+					 <td colspan='5' onclick="toggleSubMenu('Iteration1AssigntheModuletoaGroupwhichhas4learners')">&nbsp;+ Assign the Module to a Group which has 4 learners</td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1AssigntheModuletoaGroupwhichhas4learners1'> 
+					 <td style='text-align:center'>67</td> 
+					 <td class='justified'>Navigate and click the eLearning->Assign Training menu path Link</td> 
+					 <td class='justified'> 'Assign Training' link is clicked</td> 
+					 <td class='done'>DONE</td> 
+					 <td><small>10-Jul-2014 03:24:12 PM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1AssigntheModuletoaGroupwhichhas4learners2'> 
+					 <td style='text-align:center'>68</td> 
+					 <td class='justified'>Select value 'AutoModuleSkillsllyuou' from Module to Assign by Department drop down.</td> 
+					 <td class='justified'>'AutoModuleSkillsllyuou' is selected</td> 
+					 <td class='done'>DONE</td> 
+					 <td><small>10-Jul-2014 03:24:14 PM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1AssigntheModuletoaGroupwhichhas4learners3'> 
+					 <td style='text-align:center'>69</td> 
+					 <td class='justified'>Click 'Choose GROUPS' Button</td> 
+					 <td class='justified'> 'Choose GROUPS' button is clicked</td> 
+					 <td class='done'>DONE</td> 
+					 <td><small>10-Jul-2014 03:24:15 PM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1AssigntheModuletoaGroupwhichhas4learners4'> 
+					 <td style='text-align:center'>70</td> 
+					 <td class='justified'>Select the Group you would like to have added:</td> 
+					 <td class='justified'>AutoGroupNamellyuou Group is Selected.</td> 
+					 <td class='done'>DONE</td> 
+					 <td><small>10-Jul-2014 03:24:20 PM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1AssigntheModuletoaGroupwhichhas4learners5'> 
+					 <td style='text-align:center'>71</td> 
+					 <td class='justified'>Click 'OK' Button to Save the 'GROUPS'</td> 
+					 <td class='justified'>'OK' button is clicked</td> 
+					 <td class='done'>DONE</td> 
+					 <td><small>10-Jul-2014 03:24:21 PM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1AssigntheModuletoaGroupwhichhas4learners6'> 
+					 <td style='text-align:center'>72</td> 
+					 <td class='justified'>Verify the  'GROUPS' - 'AutoGroupNamellyuou' is assigned</td> 
+					 <td class='justified'>'AutoGroupNamellyuou' is assigned to Module.</td> 
+					 <td class='pass'>PASS</td> 
+					 <td><small>10-Jul-2014 03:24:25 PM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1AssigntheModuletoaGroupwhichhas4learners7'> 
+					 <td style='text-align:center'>73</td> 
+					 <td class='justified'>Click 'Assign Now' Button to Dept Module to assign.</td> 
+					 <td class='justified'>'Assign Now' button is clicked</td> 
+					 <td class='done'>DONE</td> 
+					 <td><small>10-Jul-2014 03:24:27 PM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1AssigntheModuletoaGroupwhichhas4learners8'> 
+					 <td style='text-align:center'>74</td> 
+					 <td class='justified'>Verify the Presence of ' The AutoModuleSkillsllyuou module was successfully assigned'.</td> 
+					 <td class='justified'>' The AutoModuleSkillsllyuou module was successfully assigned' message is displayed</td> 
+					 <td class='pass'>PASS</td> 
+					 <td><small>10-Jul-2014 03:24:33 PM</small></td> 
+				 </tr> 
+				 <tr class='subheading subsection'> 
+					 <td colspan='5' onclick="toggleSubMenu('Iteration1GradetheChecklists')">&nbsp;+ Grade the Checklists</td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1GradetheChecklists1'> 
+					 <td style='text-align:center'>75</td> 
+					 <td class='justified'>Navigate and click the Skills->Grade Checklists menu path Link</td> 
+					 <td class='justified'> 'Grade Checklists' link is clicked</td> 
+					 <td class='done'>DONE</td> 
+					 <td><small>10-Jul-2014 03:24:39 PM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1GradetheChecklists2'> 
+					 <td style='text-align:center'>76</td> 
+					 <td class='justified'>Select value 'Module Name' from FilterToViewCheckListBy drop down.</td> 
+					 <td class='justified'>'Module Name' is selected</td> 
+					 <td class='done'>DONE</td> 
+					 <td><small>10-Jul-2014 03:24:45 PM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1GradetheChecklists3'> 
+					 <td style='text-align:center'>77</td> 
+					 <td class='justified'>Select value 'AutoModuleSkillsllyuou' from ModuleToViewCheckList drop down.</td> 
+					 <td class='justified'>'AutoModuleSkillsllyuou' is selected</td> 
+					 <td class='done'>DONE</td> 
+					 <td><small>10-Jul-2014 03:24:48 PM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1GradetheChecklists4'> 
+					 <td style='text-align:center'>78</td> 
+					 <td class='justified'>Click 'Show Results' button.</td> 
+					 <td class='justified'>Show Results' button is clicked.</td> 
+					 <td class='done'>DONE</td> 
+					 <td><small>10-Jul-2014 03:24:48 PM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1GradetheChecklists5'> 
+					 <td style='text-align:center'>79</td> 
+					 <td class='justified'>Click Skill Named 'AAA Auto Abdominal Binder-llyuou' to grade</td> 
+					 <td class='justified'>Skill 'AAA Auto Abdominal Binder-llyuou' is Clicked Successfully</td> 
+					 <td class='done'>DONE</td> 
+					 <td><small>10-Jul-2014 03:24:57 PM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1GradetheChecklists6'> 
+					 <td style='text-align:center'>80</td> 
+					 <td class='justified'>Click Learner Named 'AutoLrnLNndmlhi' to grade</td> 
+					 <td class='justified'>Learner 'AutoLrnLNndmlhi' is Clicked Successfully</td> 
+					 <td class='done'>DONE</td> 
+					 <td><small>10-Jul-2014 03:25:08 PM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1GradetheChecklists7'> 
+					 <td style='text-align:center'>81</td> 
+					 <td class='justified'>Verify Learner, Module and Skill Name are correctly displayed.</td> 
+					 <td class='justified'> Learner: 'AutoLrnLNndmlhi' ; Module: 'AutoModuleSkillsllyuou'; Skill: 'AAA Auto Abdominal Binder-llyuou are displayed correctly as expected in Record Eval Page</td> 
+					 <td class='pass'>PASS</td> 
+					 <td><small>10-Jul-2014 03:25:10 PM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1GradetheChecklists8'> 
+					 <td style='text-align:center'>82</td> 
+					 <td class='justified'>Select Radio Universal Grade option</td> 
+					 <td class='justified'> ' Not Performed '  is Selected in the Universal Grade Radio field</td> 
+					 <td class='done'>DONE</td> 
+					 <td><small>10-Jul-2014 03:25:12 PM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1GradetheChecklists9'> 
+					 <td style='text-align:center'>83</td> 
+					 <td class='justified'>Enter Grade Overall comment </td> 
+					 <td class='justified'> ' Smoke Test - InProgress '  is entered in  Overall Grade Comment text area field</td> 
+					 <td class='done'>DONE</td> 
+					 <td><small>10-Jul-2014 03:25:14 PM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1GradetheChecklists10'> 
+					 <td style='text-align:center'>84</td> 
+					 <td class='justified'>Select Radio Overall Grade option</td> 
+					 <td class='justified'> ' IN-PROGRESS '  is Selected in the Overall Grade Radio field</td> 
+					 <td class='done'>DONE</td> 
+					 <td><small>10-Jul-2014 03:25:15 PM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1GradetheChecklists11'> 
+					 <td style='text-align:center'>85</td> 
+					 <td class='justified'>Click Save button</td> 
+					 <td class='justified'>Save Button clicked to Save the Grade Changes.</td> 
+					 <td class='done'>DONE</td> 
+					 <td><small>10-Jul-2014 03:27:49 PM</small></td> 
+				 </tr> 
+				 <tr class='content' id='Iteration1GradetheChecklists12'> 
+					 <td style='text-align:center'>86</td> 
+					 <td class='justified'>Error occured.</td> 
+					 <td class='justified'>functionallibraries.EPM_SkillsPage.gradeChecklistInRecordEvaluationPage(EPM_SkillsPage.java:710)Timed out after 2 seconds waiting for supportlibraries.BaseTestScript$1@7ec71c00
+Build info: version: '2.41.0', revision: '3192d8a', time: '2014-03-27 17:17:32'
+System info: host: 'ELSSTLL-7003932', ip: '10.184.21.76', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.6.0_30'
+Driver info: driver.version: unknown</td> 
+					 <td class='fail'><a href='..\Screenshots\TC_Smoke_Suite1_10-Jul-2014_03-27-51_PM.png'>FAIL</a></td> 
+					 <td><small>10-Jul-2014 03:27:52 PM</small></td> 
+				 </tr> 

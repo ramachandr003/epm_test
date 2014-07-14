@@ -1,0 +1,77 @@
+Starting ChromeDriver (v2.10.267521) on port 7244
+Only local connections are allowed.
+log4j:WARN No appenders could be found for logger (org.apache.http.impl.conn.tsccm.ThreadSafeClientConnManager).
+log4j:WARN Please initialize the log4j system properly.
+log4j:WARN See http://logging.apache.org/log4j/1.2/faq.html#noconfig for more info.
+Started InternetExplorerDriver server (64-bit)
+2.41.0.0
+Listening on port 48704
+org.openqa.selenium.TimeoutException: Timed out waiting for page to load. (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 180.45 seconds
+Build info: version: '2.41.0', revision: '3192d8a', time: '2014-03-27 17:17:32'
+System info: host: 'ELSSTLL-7003932', ip: '10.184.21.76', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.6.0_30'
+Session ID: 37fbc2e5-4d4a-4141-9bd1-f0558b5895b0
+Driver info: org.openqa.selenium.ie.InternetExplorerDriver
+Capabilities [{platform=WINDOWS, javascriptEnabled=true, elementScrollBehavior=0, enablePersistentHover=true, ignoreZoomSetting=false, ie.ensureCleanSession=false, browserName=internet explorer, enableElementCacheCleanup=true, unexpectedAlertBehaviour=dismiss, version=9, ie.usePerProcessProxy=false, cssSelectorsEnabled=true, ignoreProtectedModeSettings=false, requireWindowFocus=false, handlesAlerts=true, initialBrowserUrl=http://localhost:48704/, ie.forceCreateProcessApi=false, nativeEvents=true, browserAttachTimeout=0, ie.browserCommandLineSwitches=, takesScreenshot=true}]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:193)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:145)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:595)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:268)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:79)
+	at functionallibraries.MasterPage.clickElement(MasterPage.java:152)
+	at functionallibraries.EPM_SkillsPage.clickSaveGradeChanges(EPM_SkillsPage.java:813)
+	at functionallibraries.EPM_SkillsPage.gradeChecklistInRecordEvaluationPage(EPM_SkillsPage.java:696)
+	at testscripts.INT_Smoke.TC_Smoke_Suite1.executeTestcase(TC_Smoke_Suite1.java:224)
+	at supportlibraries.TestScript.executeTestIterations(TestScript.java:268)
+	at supportlibraries.TestScript.driveTestExecution(TestScript.java:93)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at allocator.ParallelRunner.invokeTestScript(ParallelRunner.java:73)
+	at allocator.ParallelRunner.run(ParallelRunner.java:47)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+org.openqa.selenium.TimeoutException: Timed out waiting for page to load. (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 180.45 seconds
+Build info: version: '2.41.0', revision: '3192d8a', time: '2014-03-27 17:17:32'
+System info: host: 'ELSSTLL-7003932', ip: '10.184.21.76', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.6.0_30'
+Session ID: 37fbc2e5-4d4a-4141-9bd1-f0558b5895b0
+Driver info: org.openqa.selenium.ie.InternetExplorerDriver
+Capabilities [{platform=WINDOWS, javascriptEnabled=true, elementScrollBehavior=0, enablePersistentHover=true, ignoreZoomSetting=false, ie.ensureCleanSession=false, browserName=internet explorer, enableElementCacheCleanup=true, unexpectedAlertBehaviour=dismiss, version=9, ie.usePerProcessProxy=false, cssSelectorsEnabled=true, ignoreProtectedModeSettings=false, requireWindowFocus=false, handlesAlerts=true, initialBrowserUrl=http://localhost:48704/, ie.forceCreateProcessApi=false, nativeEvents=true, browserAttachTimeout=0, ie.browserCommandLineSwitches=, takesScreenshot=true}]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:193)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:145)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:595)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:268)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:79)
+	at functionallibraries.MasterPage.clickElement(MasterPage.java:152)
+	at functionallibraries.EPM_SkillsPage.clickSaveGradeChanges(EPM_SkillsPage.java:813)
+	at functionallibraries.EPM_SkillsPage.gradeChecklistInRecordEvaluationPage(EPM_SkillsPage.java:696)
+	at testscripts.INT_Smoke.TC_Smoke_Suite1.executeTestcase(TC_Smoke_Suite1.java:224)
+	at supportlibraries.TestScript.executeTestIterations(TestScript.java:268)
+	at supportlibraries.TestScript.driveTestExecution(TestScript.java:93)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at allocator.ParallelRunner.invokeTestScript(ParallelRunner.java:73)
+	at allocator.ParallelRunner.run(ParallelRunner.java:47)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Jul 10, 2014 1:33:51 PM org.openqa.selenium.os.UnixProcess$SeleniumWatchDog destroyHarder
+INFO: Command failed to close cleanly. Destroying forcefully (v2). org.openqa.selenium.os.UnixProcess$SeleniumWatchDog@31955dd4
+Started InternetExplorerDriver server (64-bit)
+2.41.0.0
+Listening on port 9193
+Starting ChromeDriver (v2.10.267521) on port 3379
+Only local connections are allowed.

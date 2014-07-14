@@ -1,0 +1,22 @@
+Started InternetExplorerDriver server (64-bit)
+2.41.0.0
+Listening on port 35572
+log4j:WARN No appenders could be found for logger (org.apache.http.impl.conn.tsccm.ThreadSafeClientConnManager).
+log4j:WARN Please initialize the log4j system properly.
+log4j:WARN See http://logging.apache.org/log4j/1.2/faq.html#noconfig for more info.
+java.lang.Exception:  'HeaderDefaultCtl1_LoginStatus1'is NOT present in the DOM using the Locator HeaderDefaultCtl1_LoginStatus1
+	at functionallibraries.MasterPage.validateElementPresence(MasterPage.java:289)
+	at functionallibraries.EPM_HomePage.clickLogoutLink(EPM_HomePage.java:234)
+	at functionallibraries.EPM_HomePage.ePM_Logout_OnException(EPM_HomePage.java:251)
+	at testscripts.INT_Smoke.TC_Smoke_Suite2.executeTestcase(TC_Smoke_Suite2.java:292)
+	at supportlibraries.TestScript.executeTestIterations(TestScript.java:268)
+	at supportlibraries.TestScript.driveTestExecution(TestScript.java:93)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at allocator.ParallelRunner.invokeTestScript(ParallelRunner.java:73)
+	at allocator.ParallelRunner.run(ParallelRunner.java:47)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/jre6"/>
+	<classpathentry kind="lib" path="Selenium/poi-3.8-20120326.jar"/>
+	<classpathentry kind="lib" path="Selenium/Framework_Core.jar"/>
+	<classpathentry kind="lib" path="Selenium/Framework_DataTable.jar"/>
+	<classpathentry kind="lib" path="Selenium/Framework_Utilities.jar"/>
+	<classpathentry kind="lib" path="Selenium/junit-4.11.jar"/>
+	<classpathentry kind="lib" path="Selenium/log4j-1.2.17.jar"/>
+	<classpathentry kind="lib" path="Selenium/selenium-server-standalone-2.41.0.jar"/>
+	<classpathentry kind="lib" path="Selenium/CRAFTLite_SupportLibraries.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
